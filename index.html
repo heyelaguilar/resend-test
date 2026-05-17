@@ -12,7 +12,6 @@
 
   <form id="contactForm">
     <input type="text" id="name" placeholder="Your Name" required><br><br>
-    <input type="email" id="email" placeholder="Your Email" required><br><br>
     <textarea id="message" placeholder="Your Message" required></textarea><br><br>
     <button type="submit">Send Message</button>
   </form>
@@ -28,7 +27,6 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: document.getElementById('name').value,
-          email: document.getElementById('email').value,
           message: document.getElementById('message').value,
         }),
       });
